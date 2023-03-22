@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">InspirationPoint Test task</string>
+    <string name="participant_1">Участник 1</string>
+    <string name="participant_2">Участник 2</string>
+    <string name="participant_3">Участник 3</string>
+    <string name="participant_4">Участник 4</string>
+    <string name="participant_5">Участник 5</string>
+    <string name="participant_6">Участник 6</string>
+    <string name="participant_7">Участник 7</string>
+    <string name="number_1">1</string>
+    <string name="number_2">2</string>
+    <string name="number_3">3</string>
+    <string name="number_4">4</string>
+    <string name="number_5">5</string>
+    <string name="number_6">6</string>
+    <string name="number_7">7</string>
+    <string name="sum_of_points">Сумма очков</string>
+    <string name="place">Место</string>
+    <string name="empty_string">Royalty</string>
+</resources>
