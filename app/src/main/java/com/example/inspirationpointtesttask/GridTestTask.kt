@@ -16,6 +16,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.inspirationpointtesttask.ParticipantData.participantList
@@ -38,7 +39,23 @@ fun Table(
                             Text(text = "")
                         }
                         if (index>0 && columnIndex == 0){
-                            Text(text = "Участник $index")
+                            Text(text = stringResource(id = participantList[index - 1].name))
+                        }
+                        if (index>0 && columnIndex == 1){
+                            Text(
+                                    text = stringResource(id = participantList[index - 1].number),
+                                    textAlign = TextAlign.Center
+                            )
+                        }
+                        if (columnIndex>1){
+                            if (index==0){
+                                NeededText(text = participantList[columnIndex - 2].number)
+                            }
+                            NeededTextField(
+                                    point = 1,
+                                    onValueChange = {},
+                                    size = 19
+                            )
                         }
                     }
                 }
@@ -75,5 +92,5 @@ fun NeededTextField(
 @Preview(showBackground = true)
 @Composable
 fun PreviewTable(){
-    Table(countOfColumns = 2, cellWidth = 100)
+    Table(countOfColumns = 9, cellWidth = 75)
 }
